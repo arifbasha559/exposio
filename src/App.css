@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+.font-exposio {
+    font-family: 'Doto', sans-serif;
+}
+
+*::selection {
+    background: #ff0081;
+    color: #fff;
+}
+
+.title::selection {
+    text-shadow: 5px 3px 0px #aa002d;
+}
