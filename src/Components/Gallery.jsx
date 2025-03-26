@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { FaArrowDown, FaHeart } from "react-icons/fa";
 import { imagesData } from "./Data";
 
@@ -42,10 +41,10 @@ const Gallery = () => {
           return (
             <div
               key={index}
-              className="parent break-inside-avoid-column  overflow-hidden relative  group/img group transition duration-500 bg-black"
+              className="parent break-inside-avoid-column  overflow-hidden relative  group/img group transition duration-500"
               tabIndex="0" >
                 <img
-                  className="w-full  shadow-lg hover:shadow-xl transition duration-500  group-hover:scale-105 saturate-150 group-hover:opacity-50 group-focus:opacity-50 contrast-125 "
+                  className="w-full  shadow-lg hover:shadow-xl transition duration-500  group-hover:scale-105 saturate-150 group-hover:brightness-75 group-focus:brightness-75 contrast-125 "
                   src={image.webformatURL}
                   alt={image.tags}
                 />

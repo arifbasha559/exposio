@@ -1,4 +1,55 @@
+/* thirdpartyAPI - uncomment for API */
+// const apiKey = "47897092-9c2f8cae15ca662cb2e33adf1"; // Replace with your Pixabay API key
+// const [images, setImages] = useState([]);
+
+// const searchImages = async () => {
+//   try {
+//     const response = await fetch(
+//       `https://pixabay.com/api/?key=47897092-9c2f8cae15ca662cb2e33adf1&q=digitalarts&image_type=photo&per_page=50`
+//     );
+//     const data = await response.json();
+//     setImages(data.hits);
+//   } catch (error) {
+//     console.error("Error fetching images:", error);
+//   }
+// };
+{/* uncomment for API call */ }
+{/* <button
+        onClick={() => {
+          searchImages(), console.log(images);
+        }}
+        className="bg-[#ff0081] hover:bg-[#ff084a] text-white py-2 px-4 rounded-lg"
+      >
+        Fetch Images
+      </button> */}
+
+
+
 export const imagesData = [
+    {
+        "id": 4436027,
+        "pageURL": "https://pixabay.com/photos/portrait-fantasy-fantasy-portrait-4436027/",
+        "type": "photo",
+        "tags": "portrait, fantasy, fantasy portrait, woman, girl, young, beauty, model, ethereal, surreal, photoshop, photomanipulation, book cover, fantasy, book cover, book cover, book cover, book cover, book cover",
+        "previewURL": "https://cdn.pixabay.com/photo/2019/08/28/07/47/portrait-4436027_150.jpg",
+        "previewWidth": 100,
+        "previewHeight": 150,
+        "webformatURL": "https://pixabay.com/get/ge6c3d110d4a9c3dd412e23e953058a69266917c94d32d9973b1dba778359c84c8edca45346d4afa225b1e4a6899dd471d1e93acbbfa5f78cca621f62f807bca5_640.jpg",
+        "webformatWidth": 427,
+        "webformatHeight": 640,
+        "largeImageURL": "https://pixabay.com/get/g9772f0739c53317d865636cf7ccd887e2fdeb8bf1d56d94fb9c9ed23f656ccffe7a027e12ad1d1c582dc5e522c7548a588c53907708068d966326ef101680c96_1280.jpg",
+        "imageWidth": 3500,
+        "imageHeight": 5246,
+        "imageSize": 2863746,
+        "views": 7563,
+        "downloads": 5229,
+        "collections": 342,
+        "likes": 66,
+        "comments": 8,
+        "user_id": 2189876,
+        "user": "darksouls1",
+        "userImageURL": "https://cdn.pixabay.com/user/2016/03/31/20-50-21-793_250x250.jpg"
+    },
     {
         "id": 5459697,
         "pageURL": "https://pixabay.com/photos/digitalart-art-digital-figure-5459697/",
@@ -47,30 +98,7 @@ export const imagesData = [
         "user": "SarahRichterArt",
         "userImageURL": "https://cdn.pixabay.com/user/2016/04/25/20-19-38-614_250x250.jpg"
     },
-    {
-        "id": 5655441,
-        "pageURL": "https://pixabay.com/photos/lighthouse-cliff-ocean-waves-5655441/",
-        "type": "photo",
-        "tags": "lighthouse, cliff, ocean, waves, seascape, mountains, fantasy, coastline, grass, mountain, nature, sail, sky, white, clouds, sunset, ship, boat, composite, travel, lighthouse, lighthouse, lighthouse, lighthouse, lighthouse, cliff, seascape, fantasy, ship",
-        "previewURL": "https://cdn.pixabay.com/photo/2020/10/14/20/39/lighthouse-5655441_150.jpg",
-        "previewWidth": 150,
-        "previewHeight": 104,
-        "webformatURL": "https://pixabay.com/get/g5012f2e195fa07d46173b09d118e3eb647ebf6e8b2928900caf39ad03c8697be84d0786d857e51c870b5230cb370f5a21cb145221cec9640d370f9799c482283_640.jpg",
-        "webformatWidth": 640,
-        "webformatHeight": 442,
-        "largeImageURL": "https://pixabay.com/get/g8cb9f1d26f41b97859d0107bafe031e76114c1ce46db50ac162726d25d3ba58bb0631bd620af2dbab935253603c96bf1688f3e41ad70c4d8637e6d92a54633f6_1280.jpg",
-        "imageWidth": 5500,
-        "imageHeight": 3800,
-        "imageSize": 5595630,
-        "views": 19677,
-        "downloads": 16734,
-        "collections": 419,
-        "likes": 157,
-        "comments": 183,
-        "user_id": 9214707,
-        "user": "Mollyroselee",
-        "userImageURL": "https://cdn.pixabay.com/user/2024/11/05/10-25-17-681_250x250.jpg"
-    },
+   
     {
         "id": 3815570,
         "pageURL": "https://pixabay.com/photos/braunschweig-city-lower-saxony-3815570/",
@@ -215,30 +243,7 @@ export const imagesData = [
         "user": "flutie8211",
         "userImageURL": "https://cdn.pixabay.com/user/2023/05/21/19-38-51-804_250x250.jpg"
     },
-    {
-        "id": 4436027,
-        "pageURL": "https://pixabay.com/photos/portrait-fantasy-fantasy-portrait-4436027/",
-        "type": "photo",
-        "tags": "portrait, fantasy, fantasy portrait, woman, girl, young, beauty, model, ethereal, surreal, photoshop, photomanipulation, book cover, fantasy, book cover, book cover, book cover, book cover, book cover",
-        "previewURL": "https://cdn.pixabay.com/photo/2019/08/28/07/47/portrait-4436027_150.jpg",
-        "previewWidth": 100,
-        "previewHeight": 150,
-        "webformatURL": "https://pixabay.com/get/ge6c3d110d4a9c3dd412e23e953058a69266917c94d32d9973b1dba778359c84c8edca45346d4afa225b1e4a6899dd471d1e93acbbfa5f78cca621f62f807bca5_640.jpg",
-        "webformatWidth": 427,
-        "webformatHeight": 640,
-        "largeImageURL": "https://pixabay.com/get/g9772f0739c53317d865636cf7ccd887e2fdeb8bf1d56d94fb9c9ed23f656ccffe7a027e12ad1d1c582dc5e522c7548a588c53907708068d966326ef101680c96_1280.jpg",
-        "imageWidth": 3500,
-        "imageHeight": 5246,
-        "imageSize": 2863746,
-        "views": 7563,
-        "downloads": 5229,
-        "collections": 342,
-        "likes": 66,
-        "comments": 8,
-        "user_id": 2189876,
-        "user": "darksouls1",
-        "userImageURL": "https://cdn.pixabay.com/user/2016/03/31/20-50-21-793_250x250.jpg"
-    },
+    
     {
         "id": 2106625,
         "pageURL": "https://pixabay.com/photos/landscapedesign-photomanipulations-2106625/",
@@ -287,30 +292,7 @@ export const imagesData = [
         "user": "BosskuArt",
         "userImageURL": "https://cdn.pixabay.com/user/2025/02/09/04-32-26-670_250x250.jpeg"
     },
-    {
-        "id": 3106712,
-        "pageURL": "https://pixabay.com/photos/man-artistic-abstract-graphic-3106712/",
-        "type": "photo",
-        "tags": "man, artistic, abstract, graphic, motion, dancer, male, street dance, modern, creative, young, style, performance, person, funky, hip-hop, lifestyle, active, digital art, digital enhancement, photo art, dancer, street dance, street dance, street dance, street dance, street dance, funky, funky, funky",
-        "previewURL": "https://cdn.pixabay.com/photo/2018/01/25/18/00/man-3106712_150.jpg",
-        "previewWidth": 100,
-        "previewHeight": 150,
-        "webformatURL": "https://pixabay.com/get/gceafb2304097eb91448c1c54f32f84de0877bc2b39190e68a104940a3e46ad83e9082d887b8ff222b93b09b9da9d39ff22ae62b6d4cf68c13378dbf05631c257_640.jpg",
-        "webformatWidth": 426,
-        "webformatHeight": 640,
-        "largeImageURL": "https://pixabay.com/get/gcd9805854e6ea76cf2ae4adc0373ed0da3d15cffbedea746c38c27fa8a98ca312c4f8fe8f0f673ec7d2d3927c8b9cbd6a576307a7fada282113955070059b992_1280.jpg",
-        "imageWidth": 2309,
-        "imageHeight": 3464,
-        "imageSize": 1773908,
-        "views": 9483,
-        "downloads": 5482,
-        "collections": 270,
-        "likes": 18,
-        "comments": 1,
-        "user_id": 5337,
-        "user": "ArtTower",
-        "userImageURL": "https://cdn.pixabay.com/user/2019/07/27/00-12-46-447_250x250.jpg"
-    },
+    
     {
         "id": 2488690,
         "pageURL": "https://pixabay.com/photos/sky-cosmos-night-astronomy-galaxy-2488690/",
@@ -791,30 +773,7 @@ export const imagesData = [
         "user": "ArtTower",
         "userImageURL": "https://cdn.pixabay.com/user/2019/07/27/00-12-46-447_250x250.jpg"
     },
-    {
-        "id": 3070287,
-        "pageURL": "https://pixabay.com/photos/woman-action-fantasy-long-hair-3070287/",
-        "type": "photo",
-        "tags": "woman, action, fantasy, long hair, fashion, beauty, clothing, female, feminine, combative, person, pose, model, genesis, 3dfrau, 3d visualization, rendering, render, design, digital art, isolated, woman, woman, woman, action, action, clothing, genesis, genesis, genesis, genesis, genesis",
-        "previewURL": "https://cdn.pixabay.com/photo/2018/01/08/20/54/woman-3070287_150.png",
-        "previewWidth": 65,
-        "previewHeight": 150,
-        "webformatURL": "https://pixabay.com/get/gcbdb003524f73033f05a261ebe1406349618b092875405ea40c380446251590b694421ea41ffa646c526610c2c8ddf27e60d1a62428011381932abb3afec111b_640.png",
-        "webformatWidth": 280,
-        "webformatHeight": 640,
-        "largeImageURL": "https://pixabay.com/get/gd623bf7baee10a69097b551b99a65659d40036fa911931b71c1ffa000edeb09c079ef0b405d78a512c839160af52c3d8d0fe3e2e0a93b645acef9802a879fe24_1280.png",
-        "imageWidth": 1736,
-        "imageHeight": 3968,
-        "imageSize": 6194294,
-        "views": 11508,
-        "downloads": 9861,
-        "collections": 231,
-        "likes": 45,
-        "comments": 5,
-        "user_id": 2348028,
-        "user": "anaterate",
-        "userImageURL": "https://cdn.pixabay.com/user/2020/09/24/19-54-49-481_250x250.jpg"
-    },
+    
     {
         "id": 3167440,
         "pageURL": "https://pixabay.com/photos/water-sea-ocean-travel-outdoors-3167440/",
