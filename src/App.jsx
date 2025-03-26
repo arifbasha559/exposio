@@ -1,16 +1,25 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import Gallery from "./Components/Gallery";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
-    <div className="bg-[#F4C2C2] px-20 min-h-screen mb-96 max-w-screen relative  bg-cover bg-center bg-fixed"> 
-    <div className="navbar w-full flex justify-center sticky top-0 left-0 backdrop-blur-xs h-fit " >
-      
-      <h1 className='text-5xl text-s font-extrabold  py-5 font-exposio text-transparent bg-gradient-to-r w-fit bg-clip-text from-[#ff0081] to-[#ff084a] title '>Exposio</h1>
-    </div>
+    <Router>
+      <div className="body-font bg-[#F4C2C2] min-h-screen max-w-screen relative bg-cover bg-center bg-fixed">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
 
+export default App;
 
-    </div>
-  )
-}
-
-export default App
