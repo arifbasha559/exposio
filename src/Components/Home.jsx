@@ -41,7 +41,7 @@ const Home = () => {
     <div className="w-full px-20">
       {/* Hero Section */}
       <div className="hero flex flex-col justify-center items-center gap-4 py-20  md:py-40 h-auto md:h-[calc(100vh-5rem)] px-4">
-        <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-transparent bg-gradient-to-r w-fit bg-clip-text from-[#ff0081] to-[#ff084a] animate-fadeIn text-center pb-3">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-transparent bg-gradient-to-r w-fit bg-clip-text from-[#ff0081] to-[#ff084a] text-center pb-3">
           Moments Captured in Light
         </h2>
         <p className="text-lg  sm:text-xl md:text-2xl font-light text-[#ff084a] text-center">

@@ -1,86 +1,103 @@
-import { FaArrowDown, FaHeart } from "react-icons/fa";
-import { imagesData } from "./Data";
-
+import { Link } from "react-router-dom";
+import { FaImages, FaVideo, FaCamera, FaHeartbeat } from "react-icons/fa";
+import { GiAbstract055 } from "react-icons/gi";
 
 const Gallery = () => {
-  /* thirdpartyAPI - uncomment for API */
-  // const apiKey = "47897092-9c2f8cae15ca662cb2e33adf1"; // Replace with your Pixabay API key
-  // const [images, setImages] = useState([]);
-
-  // const searchImages = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       `https://pixabay.com/api/?key=${apiKey}&q=digitalarts&image_type=photo&per_page=50`
-  //     );
-  //     const data = await response.json();
-  //     setImages(data.hits);
-  //   } catch (error) {
-  //     console.error("Error fetching images:", error);
-  //   }
-  // };
-
   return (
-    <div className="py-16 sm:px-0 flex flex-col items-center gap-5 min-h-screen">
+    <div className="py-16 sm:px-0 flex flex-col items-center gap-5 min-h-[calc(100vh-5rem)]">
       <h1 className="text-5xl font-extrabold py-5 text-transparent bg-gradient-to-r w-fit bg-clip-text from-[#ff0081] to-[#ff084a]">
-        Gallery
+        Curated Showcase
       </h1>
-{/* uncomment for API call */}
-      {/* <button
-        onClick={() => {
-          searchImages(), console.log(images);
-        }}
-        className="bg-[#ff0081] hover:bg-[#ff084a] text-white py-2 px-4 rounded-lg"
-      >
-        Fetch Images
-      </button> */}
+      <p className="text-gray-900 text-lg text-center max-w-2xl px-5">
+        Experience a collection of immersive visuals, carefully curated to tell
+        a story, evoke emotions, and inspire creativity.
+      </p>
 
-      {/* Masonry Grid */}
-      <div className="columns-1 md:columns-3 lg:columns-3 gap-0 py-4 md:px-20 px-5 ">
-        {imagesData.map((image, index) => {
-          if (image.webformatURL == null) return null;
-          return (
-            <div
-              key={index}
-              className="parent break-inside-avoid-column  overflow-hidden relative  group/img group transition duration-500"
-              tabIndex="0" >
-                <img
-                  className="w-full  shadow-lg hover:shadow-xl transition duration-500  group-hover:scale-105 saturate-150 group-hover:brightness-75 group-focus:brightness-75 contrast-125 "
-                  src={image.webformatURL}
-                  alt={image.tags}
-                />
-                <div className="hidden group-hover/img:flex group-focus/img:flex flex-col items-center justify-center absolute inset-0  transition duration-500">  
-
-              <button className="absolute top-2 left-2 flex items-stretch w-[100px] h-[35px] border-none rounded-[5px] overflow-hidden shadow-[5px_5px_10px_rgba(0,0,0,0.089)] cursor-pointer bg-transparent hover:[&_.leftContainer]:bg-[rgb(219,0,0)] active:[&_.leftContainer]:bg-[rgb(201,0,0)] active:[&_svg]:scale-[1.15] active:[&_svg]:origin-top">
-                {/* Left container with heart icon and "Like" text */}
-                <span className="leftContainer flex items-center text-xs justify-center w-[60%] h-full bg-[rgb(238,0,0)] gap-2">
-                  <FaHeart className="transition-transform text-white  text-sm" />
-                  <span className="like text-white font-semibold">Like</span>
-                </span>
-
-                {/* Like count with diagonal notch */}
-                <span className="likeCount flex items-center text-xs justify-center w-[40%] h-full text-[#ff084a] font-semibold bg-white relative before:content-[''] before:absolute before:bg-white before:w-2 before:h-2 before:-left-1 before:rotate-45">
-                  {image.likes}
-                </span>
-              </button>
-              <div className="absolute right-1   bottom-2">
-                <div className="flex items-center justify-center">
-                  {[...new Set(image.tags.split(", "))].map((tag, index) => {
-                    if(index>2) return null;
-                    return (
-                      <span
-                      key={index}
-                      className="inline-block bg-[#ff0081]/50 text-white text-xs px-2 py-1 rounded-full m-1"
-                      >
-                        {tag}
-                      </span>
-                    );
-                  })}
-                </div>
-                  </div>
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-4 md:px-20 px-5">
+        <Link to="Images" className="w-full h-full group/img">
+          <div className="flex flex-col items-center justify-center p-10 h-full bg-white/30 backdrop-blur-lg rounded-lg shadow-lg hover:shadow-xl transition duration-500 hover:scale-[1.02] cursor-pointer relative">
+            <div className="bg-white/80 p-4 rounded-full mb-4 group-hover/img:bg-[#ff0081] group-focus/img:bg-[#ff0081] transition duration-500"> 
+              <FaImages className="text-3xl text-[#ff0081] group-hover/img:text-white  " />
             </div>
-          );
-        })}
+            <h2 className="text-3xl font-bold text-[#ff0081] drop-shadow-md">
+              Explore the Photos
+            </h2>
+            <p className="text-gray-700 text-sm mt-2 text-center max-w-xs">
+              Dive into a world of cinematic visuals, creative compositions, and
+              powerful narratives.
+            </p>
+          </div>
+        </Link>
+
+        <Link to="Videos" className="w-full h-full group/vid">
+          <div className="flex flex-col items-center justify-center p-10 h-full bg-white/30 backdrop-blur-lg rounded-lg shadow-lg hover:shadow-xl transition duration-500 hover:scale-[1.02] cursor-pointer relative">
+            <div className="bg-white/80 p-4 rounded-full mb-4 group-hover/vid:bg-[#ff084a] group-focus/vid:bg-[#ff084a] transition duration-500"> 
+              <FaVideo className="text-3xl text-[#ff084a] group-hover/vid:text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-[#ff084a] drop-shadow-md">
+              Explore the Videos
+            </h2>
+            <p className="text-gray-700 text-sm mt-2 text-center max-w-xs">
+              A handpicked selection of standout moments from our gallery.
+            </p>
+          </div>
+        </Link>
+      </div>
+
+      <div className="mt-16 text-center px-5 max-w-4xl">
+        <h3 className="text-2xl font-semibold text-black">A Visual Journey</h3>
+        <p className="text-gray-800 mt-2">
+          Each piece in our collection is more than just an image or video—it's
+          a story, a mood, a perspective. We invite you to experience creativity
+          through a curated lens.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-5xl">
+        <div className="p-6 bg-white/30 backdrop-blur-lg rounded-lg shadow-lg hover:shadow-xl transition duration-500 hover:scale-[1.02]">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="bg-[#ff0081]/20 p-2 rounded-full">
+              <FaCamera className="text-xl text-[#ff0081]" />
+            </div>
+            <h4 className="text-xl font-bold text-[#ff0081]">
+              Cinematic Frames
+            </h4>
+          </div>
+          <p className="text-gray-900 text-sm mt-2">
+            Moments captured in motion, blending storytelling with stunning
+            visuals.
+          </p>
+        </div>
+
+        <div className="p-6 bg-white/30 backdrop-blur-lg rounded-lg shadow-lg hover:shadow-xl transition duration-500 hover:scale-[1.02]">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="bg-[#ff084a]/20 p-2 rounded-full">
+              <GiAbstract055 className="text-xl text-[#ff084a]" />
+            </div>
+            <h4 className="text-xl font-bold text-[#ff084a]">
+              Abstract Perspectives
+            </h4>
+          </div>
+          <p className="text-gray-900 text-sm mt-2">
+            A different way of seeing—thought-provoking, visually stunning
+            compositions.
+          </p>
+        </div>
+
+        <div className="p-6 bg-white/30 backdrop-blur-lg rounded-lg shadow-lg hover:shadow-xl transition duration-500 hover:scale-[1.02]">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="bg-[#ff0081]/20 p-2 rounded-full">
+              <FaHeartbeat className="text-xl text-[#ff0081]" />
+            </div>
+            <h4 className="text-xl font-bold text-[#ff0081]">
+              Emotion in Motion
+            </h4>
+          </div>
+          <p className="text-gray-900 text-sm mt-2">
+            Experience powerful emotions through carefully curated visual
+            storytelling.
+          </p>
+        </div>
       </div>
     </div>
   );

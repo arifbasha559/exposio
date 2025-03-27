@@ -5,6 +5,8 @@ import Home from "./Components/Home";
 import Gallery from "./Components/Gallery";
 import Footer from "./Components/Footer";
 import NotFound from "./Components/NotFound";
+import Images from "./Components/Images";
+import Videos from "./Components/Videos";
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery/images" element={<Images />} />
+          <Route path="/gallery/videos" element={<Videos />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
