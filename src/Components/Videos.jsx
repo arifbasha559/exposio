@@ -1,8 +1,27 @@
+import { useEffect, useState } from "react";
 import { FaArrowDown, FaHeart } from "react-icons/fa";
 
-import { Data } from "./VideosData";
 
 const Videos = () => {
+ const apiKey = "47897092-9c2f8cae15ca662cb2e33adf1"; // Replace with your Pixabay API key
+   const [Data, setData] = useState([]);
+ useEffect(() => {
+ 
+ 
+   const fetchVideos = async () => {
+     try {
+       const response = await fetch(
+         `https://pixabay.com/api/videos/?key=${apiKey}&q=cinematics&image_type=video&per_page=50`
+       );
+       const data = await response.json();
+       // console.log (data);
+       setData(data.hits); // Set the state with the fetched data
+     } catch (error) {
+       console.error("Error fetching images:", error);
+     }
+   };
+   fetchVideos();
+ }, []); // Empty dependency array to run once on component mount
  
   return (
     <div className="py-16 flex flex-col items-center gap-5 min-h-screen max-w-[2080px] mx-auto">

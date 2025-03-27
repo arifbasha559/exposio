@@ -1,7 +1,27 @@
 import { FaHeart } from "react-icons/fa";
-import { Data } from "./Data";
+// import Data from "./Data";
+import { useEffect, useState } from "react";
 const Images = () => {
- 
+  
+  
+  const [Data, setData] = useState([]);
+useEffect(() => {
+ const searchImages = async () => {
+    try {
+      const response = await fetch(
+        `https://pixabay.com/api/?key=47897092-9c2f8cae15ca662cb2e33adf1&q=digitalarts&image_type=photo&per_page=50`
+      );
+      const data = await response.json();
+      // console.log (data);
+      setData(data.hits); // Set the state with the fetched data
+    } catch (error) {
+      console.error("Error fetching images:", error, );
+    }
+  };
+  searchImages();
+}, []); // Empty dependency array to run once on component mount
+  console.log("Data", Data);
+  
   return (
     <div className="py-16 sm:px-0 flex flex-col items-center gap-5 min-h-screen">
       <h1 className="text-5xl font-extrabold py-5 text-transparent bg-gradient-to-r w-fit bg-clip-text from-[#ff0081] to-[#ff084a]">
@@ -10,6 +30,8 @@ const Images = () => {
 
       <div className="columns-1 md:columns-3 lg:columns-3 gap-0 py-4 md:px-20 px-5">
         {Data.map((image, index) => {
+          console.log("image", image, "index", index);
+
           if (!image.webformatURL) return null;
           return (
             <div
@@ -22,11 +44,8 @@ const Images = () => {
                 alt={image.tags}
               />
 
-              <div className="hidden group-hover:flex flex-col items-center justify-center absolute inset-0 transition duration-500">
-                <button
-                  className="absolute top-2 left-2 flex items-stretch w-[100px] h-[35px] border-none rounded-[5px] overflow-hidden shadow-md cursor-pointer bg-transparent hover:[&_.leftContainer]:bg-[rgb(219,0,0)]"
-                 
-                >
+              <div className="hidden group-hover:flex group-focus:flex flex-col items-center justify-center absolute inset-0  transition duration-500">
+                <button className="absolute top-2 left-2 flex items-stretch w-[100px] h-[35px] border-none rounded-[5px] overflow-hidden shadow-md cursor-pointer bg-transparent hover:[&_.leftContainer]:bg-[rgb(219,0,0)]">
                   <span className="leftContainer flex items-center text-xs justify-center w-[60%] h-full bg-[rgb(238,0,0)] gap-2">
                     <FaHeart className="text-white text-sm" />
                     <span className="like text-white font-semibold">Like</span>
@@ -60,3 +79,4 @@ const Images = () => {
 };
 
 export default Images;
+

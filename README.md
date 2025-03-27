@@ -1,67 +1,48 @@
-# Exposio - Moments Captured in Light
+# Exposio Gallery
 
-Welcome to **Exposio**, a sophisticated and modern photography gallery crafted to exhibit breathtaking images captured through the lens. With an elegant design and seamless user experience, Exposio provides the ideal platform to display your photographic artwork.
+[Live Demo](https://exposio-gallery.vercel.app/) | [GitHub Repository](https://github.com/arifbasha559/exposio) | [Portfolio](https://arifbasha559.vercel.app/)
+
+Exposio Gallery is a modern, responsive media showcase platform built with React and Tailwind CSS. It features dynamic image and video galleries with interactive liking functionality.
 
 ## Features
 
-- **Responsive Design**: Experience seamless adaptability across devices with a fully responsive layout.
-- **Dynamic Gallery**: Effortlessly curate and showcase your photo collections with intuitive management tools.
-- **Smooth Animations**: Engage viewers with fluid transitions and captivating animations.
-- **Customizable Themes**: Tailor the aesthetic with versatile and customizable themes.
-- **Fast and Efficient**: Engineered with modern technologies for swift load times and intuitive navigation.
-
-## Tech Stack
-
-- **Frontend**: React, Tailwind CSS
-- **Bundler**: Vite
-- **Linting**: ESLint
-- **Package Management**: npm
+- 🖼️ **Image & Video Galleries** - Displays a curated collection of media.
+- ❤️ **Like System** - Users can like images and videos with persistent counts.
+- 🎨 **Modern UI** - Styled with Tailwind CSS for a sleek and responsive design.
+- 🔄 **Dynamic Updates** - Client-side updates for a seamless experience.
+- 🚀 **Optimized Performance** - Built using Vite for fast development and deployment.
 
 ## Installation
 
-To get started with Exposio, follow these steps:
+Clone the repository and install dependencies:
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/arifbasha/exposio.git
-   cd exposio
-   ```
-
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the Development Server**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Access the Gallery**:
-   Open your browser and navigate to `http://localhost:5173` to explore the gallery.
+```sh
+ git clone https://github.com/arifbasha559/exposio.git
+ cd exposio
+ npm install
+```
 
 ## Usage
 
-- **Add Photos**: Place your images in the `src/assets/images` directory.
-- **Customize Settings**: Adjust gallery configurations in `src/App.jsx` to suit your preferences.
-- **Deploy the Gallery**: Use the build command for deployment:
-  ```bash
-  npm run build
-  ```
+Start the development server:
+
+```sh
+npm run dev
+```
+
+Then, open `http://localhost:5173/` in your browser.
+
+## Technologies Used
+
+- **React** - Component-based UI framework.
+- **Tailwind CSS** - Utility-first CSS framework.
+- **Vite** - Fast development server and build tool.
 
 ## Contributing
 
-We welcome contributions! To contribute to Exposio, please fork the repository and submit a pull request with your enhancements.
+Feel free to fork the repository and submit pull requests. Any contributions to improve the project are welcome!
 
 ## License
 
-This project is licensed under the MIT License. For more information, refer to the [LICENSE](LICENSE) file.
-
-## Contact
-
-For inquiries or feedback, please reach out to [arifbasha559@gmail.com](mailto:arifbasha559@gmail.com).
-
----
-
-We appreciate your choice of Exposio! We hope you enjoy showcasing your photography with us. Thank you for being a part of our community.
+This project is open-source and available under the [MIT License](LICENSE).
 
