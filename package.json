@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "start": "vite --host ",
-    "dev": "nodemon ./server.js",
+    "host": "vite --host ",
+    
     "lint": "eslint .",
     "preview": "vite preview"
   },
