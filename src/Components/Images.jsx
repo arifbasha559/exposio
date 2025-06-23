@@ -7,7 +7,7 @@ const Images = () => {
     const searchImages = async () => {
       try {
         const response = await fetch(
-          `https://pixabay.com/api/?key=47897092-9c2f8cae15ca662cb2e33adf1&q=digitalarts&per_page=200`
+          `https://pixabay.com/api/?key=47897092-9c2f8cae15ca662cb2e33adf1&q=photography&per_page=200`
         );
         const data = await response.json();
         // console.log (data);
@@ -18,7 +18,7 @@ const Images = () => {
     };
     searchImages();
   }, []); // Empty dependency array to run once on component mount
-  console.log("Data", Data);
+  // console.log("Data", Data);
 
   return (
     <div className="py-16  sm:px-0 flex flex-col items-center gap-5 min-h-screen select-none">
@@ -37,13 +37,14 @@ const Images = () => {
               className=" parent break-inside-avoid-column overflow-hidden relative group transition duration-500"
             >
               <img
-                className="w-full shadow-lg hover:shadow-xl transition duration-500 group-hover:scale-105 saturate-150 group-hover:brightness-75 contrast-125"
+                className="w-full shadow-lg hover:shadow-xl transition duration-500 group-hover:scale-105 saturate-150 group-hover:brightness-7a5 contrast-125"
                 src={image.webformatURL}
-                alt={image.tags}
+                
+                alt={image.title}
               />
 
-              <div className="hidden group-hover:flex group-focus:flex flex-col items-center justify-center absolute inset-0  transition duration-500">
-                <button className="absolute top-2 left-2 flex items-stretch w-[100px] h-[35px] border-none rounded-[5px] overflow-hidden shadow-md cursor-pointer bg-transparent hover:[&_.leftContainer]:bg-[rgb(219,0,0)]">
+              <div className="hidden group-hover:flex hover:bg-gradient-to-r  from-[#ff008067] to-[#ff084a50] group-focus:flex flex-col items-center justify-center absolute inset-0  transition duration-500">
+                <button className="absolute top-2 left-2 flex items-stretch w-[100px] h-[35px] border-none rounded-[5px] overflow-hidden shadow-md cursor-pointer bg-transparent hover:[&_.leftContainer]:bg-[rgb(219,0,0)] ">
                   <span className="leftContainer flex items-center text-xs justify-center w-[60%] h-full bg-[rgb(238,0,0)] gap-2">
                     <FaHeart className="text-white text-sm" />
                     <span className="like text-white font-semibold">Like</span>
@@ -68,9 +69,9 @@ const Images = () => {
                     document.body.removeChild(link);
                     window.URL.revokeObjectURL(url);
                   }}
-                  className="absolute top-2 right-2 flex items-center justify-center px-4 py-2 border-none rounded-lg overflow-hidden shadow-md cursor-pointer bg-black hover:bg-gradient-to-r from-[#ff0081] to-[#ff084a] text-white"
+                  className="absolute top-2 right-2 flex items-center justify-center px-4 py-2 border border-white/50 rounded-lg overflow-hidden shadow-md cursor-pointer bg-black hover:bg-gradient-to-r from-[#ff0081] to-[#ff084a] text-white "
                 >
-                 <FaDownload  />
+                  <FaDownload />
                 </button>
 
                 <div className="absolute right-1   bottom-2">

@@ -1,27 +1,43 @@
+import { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { data, Link } from "react-router-dom";
 
 const Home = () => {
+    const [Data, setData] = useState([]);
+  useEffect(() => {
+    const searchImages = async () => {
+      try {
+        const response = await fetch(
+          `https://pixabay.com/api/?key=47897092-9c2f8cae15ca662cb2e33adf1&q=photography&per_page=200`
+        );
+        const data = await response.json();
+        // console.log (data);
+        setData(data.hits); // Set the state with the fetched data
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+    searchImages();
+  }, []);
+  console.log(Data);
+  
   const galleryImages = [
     {
       id: 1,
       title: "Golden Hour",
       category: "Nature",
-      link: "https://pixabay.com/get/g828c8923ccbf8aa9681021facbf303580c38d9c25b7accb63cfb06207266a827210a7093fce73772228b0cdb8391689d94750c3f30db91c6ca1a95a1732ad91d_640.jpg",
-    },
+       },
     {
       id: 2,
       title: "Urban Shadows",
       category: "Cityscape",
-      link: "https://pixabay.com/get/gee68bf4c0334f144024616f21517ff58c8e3df878fa18bbb4cded1ffb27ef7f8cd8db895f3f35b0c74d56f5dcf265dd35e26ab1738f721909cf9df325b35776c_640.jpg",
-    },
+        },
     {
       id: 3,
       title: "Silhouette Dreams",
       category: "Portrait",
-      link: "https://pixabay.com/get/ga448e468c02be42aab7a3ad626cb62c3963ad6894f3e3969edbfbb2b6bd364b666cdfa26d4d82d4f335cc88b3f67600b1beb920eca0ae0ce6e3aec6614441ad3_640.jpg",
-    },
+      },
   ];
 
   const testimonials = [
@@ -68,7 +84,7 @@ const Home = () => {
           Featured Works
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-          {galleryImages.map((image) => (
+          {galleryImages.map((image,index) => (
             <div
               key={image.id}
               className="bg-white/30 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-500 hover:scale-[1.02]"
@@ -76,12 +92,12 @@ const Home = () => {
               <div className="h-48 sm:h-64 bg-gradient-to-br from-pink-200 to-rose-300 flex items-center justify-center">
                 <img
                   className="image text-lg font-medium text-[#ff084a] h-full w-full object-cover"
-                  src={image.link}
+                  src={Data[Math.floor(Math.random()*50)]?.webformatURL || "https://via.placeholder.com/600x400.png?text=Art+Preview"}
                   alt={image.title}
                 />
               </div>
               <div className="p-4">
-                <p className="text-sm text-[#ff0081]">{image.category}</p>
+                <p className="font-medium text-[#ff084a]">{image.category}</p>
               </div>
             </div>
           ))}

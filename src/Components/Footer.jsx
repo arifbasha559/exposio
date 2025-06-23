@@ -1,5 +1,6 @@
 import React from "react";
-import { FaInstagram, FaRegCopyright } from "react-icons/fa";
+import { FaGit, FaInstagram, FaRegCopyright } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
 
 const Footer = () => {
@@ -18,10 +19,10 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/arif_off04/"
+            href="https://github.com/ArifBasha559"
             className="text-gray-500 hover:text-pink-500 transition duration-300"
           >
-            <FaInstagram className="text-2xl md:text-3xl" />
+            <FaGithub className="text-2xl md:text-3xl" />
           </a>
           <a
             target="_blank"

@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import NotFound from "./Components/NotFound";
 import Images from "./Components/Images";
 import Videos from "./Components/Videos";
+import About from "./Components/About";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
           <Route path="/gallery/images" element={<Images />} />
           <Route path="/gallery/videos" element={<Videos />} />
           <Route path="*" element={<NotFound />} />
