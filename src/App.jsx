@@ -8,6 +8,7 @@ import NotFound from "./Components/NotFound";
 import Images from "./Components/Images";
 import Videos from "./Components/Videos";
 import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/gallery/images" element={<Images />} />
           <Route path="/gallery/videos" element={<Videos />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

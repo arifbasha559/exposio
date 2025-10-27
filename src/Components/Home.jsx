@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
-import { data, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const [Data, setData] = useState([]);
@@ -84,7 +84,7 @@ const Home = () => {
           Featured Works
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-          {galleryImages.map((image,index) => (
+          {galleryImages.map((image) => (
             <div
               key={image.id}
               className="bg-white/30 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-500 hover:scale-[1.02]"

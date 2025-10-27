@@ -42,12 +42,7 @@ const Navbar = () => {
         >
           About
         </Link>
-        <Link
-          to="/services"
-          className="block lg:inline-block text-lg font-medium text-gray-700 hover:text-[#ff0081] px-5 py-2 lg:p-0"
-          >
-          Services
-        </Link>
+
         <Link
           to="/contact"
           className="block lg:inline-block text-lg font-medium text-gray-700 hover:text-[#ff0081] px-5 py-2 lg:p-0"
