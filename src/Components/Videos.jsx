@@ -11,7 +11,7 @@ const Videos = () => {
    const fetchVideos = async () => {
      try {
        const response = await fetch(
-         `https://pixabay.com/api/videos/?key=${apiKey}&q=cinematics&image_type=video&per_page=50`
+         `https://pixabay.com/api/videos/?key=${apiKey}&q=cinematics&image_type=video&per_page=100`
        );
        const data = await response.json();
        // console.log (data);
@@ -55,6 +55,7 @@ const Videos = () => {
                 muted
                 loop
                 playsInline
+                
               />
 
               <div className="hidden group-hover:flex group-focus:flex flex-col items-center justify-center absolute inset-0  transition duration-500">

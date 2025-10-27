@@ -39,7 +39,7 @@ const Images = () => {
               <img
                 className="w-full shadow-lg hover:shadow-xl transition duration-500 group-hover:scale-105 saturate-150 group-hover:brightness-7a5 contrast-125"
                 src={image.webformatURL}
-                
+                loading="lazy"
                 alt={image.title}
               />
 
